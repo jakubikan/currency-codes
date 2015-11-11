@@ -1168,15 +1168,47 @@
 
         },
 
-        currencySymbol: function(code) {
+        currencySymbol: function (code) {
 
 
             return currency.symbolize(code);
 
         },
 
-        data: function() {
-            return _.extend([], data, function(emtpy, dataElement) {
+        dataByCountries: function (countries) {
+
+            var countyNames;
+            if (_.isString(countries)) {
+
+                countyNames = _.words(countries);
+
+            }
+            if (_.isArray(countries)) {
+
+                countyNames = countries;
+
+            }
+
+            return _.filter(this.data(), function (d) {
+
+                var includes = false;
+
+                for(var country = 0; country < countyNames.length; country++) {
+
+                    if(_.includes(d.countries, countyNames[country].toLowerCase())){
+                        includes = true;
+                    }
+
+                }
+
+                return includes;
+            });
+
+
+        },
+
+        data: function () {
+            return _.extend([], data, function (emtpy, dataElement) {
 
                 dataElement.symbol = currency.symbolize(dataElement.code);
 

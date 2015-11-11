@@ -9,3 +9,4 @@ assert(cc.codes().length === 179);
 assert(cc.countries().length === 246);
 assert(cc.countries().length === 246);
 assert(cc.currencySymbol('EUR') === '\u20ac');
+console.log(cc.dataByCountries('Germany Afghanistan'));
