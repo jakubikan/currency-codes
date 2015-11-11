@@ -1176,7 +1176,7 @@
         },
 
         data: function() {
-            return _.extend({}, data, function(emtpy, dataElement) {
+            return _.extend([], data, function(emtpy, dataElement) {
 
                 dataElement.symbol = currency.symbolize(dataElement.code);
 
