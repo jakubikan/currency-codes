@@ -13,11 +13,11 @@
     "codes",
     "lookup"
   ],
-  "dependencies": {
-    "first-match": "~0.0.1",
-    "nub": "~0.0.0"
-  },
   "scripts": {
     "test": "node test.js"
+  },
+  "dependencies": {
+    "currency-symbol.js": "^0.1.0",
+    "lodash": "^3.10.1"
   }
 }

@@ -1,0 +1,29 @@
+{
+  "name": "currency-codes",
+  "main": "index.js",
+  "version": "1.1.2",
+  "homepage": "https://github.com/jakubikan/currency-codes",
+  "authors": [
+    "jakub <jack@jaxxnet.de>"
+  ],
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "currency"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "currency-symbol.js": "~1.0.0",
+    "lodash": "~3.10.1"
+  }
+}
