@@ -1126,6 +1126,7 @@
 
     /*jshint -W117*/
     var _ = root._ || require('lodash');
+    var currency = root.currency || require('currency-symbol.js');
     /*jshint +W117*/
 
     var lib = {
@@ -1169,11 +1170,19 @@
 
         currencySymbol: function(code) {
 
-            /*jshint -W117*/
-            var currency = root.currency || require('currency-symbol.js');
-            /*jshint +W117*/
 
             return currency.symbolize(code);
+
+        },
+
+        data: function() {
+            return _.extend({}, data, function(emtpy, dataElement) {
+
+                dataElement.symbol = currency.symbolize(dataElement.code);
+
+                return dataElement;
+
+            });
 
         }
 
