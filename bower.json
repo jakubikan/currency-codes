@@ -24,6 +24,6 @@
   ],
   "dependencies": {
     "currency-symbol.js": "~1.0.0",
-    "lodash": "3.0.0 <= latest"
+    "lodash": "~3.10.1"
   }
 }
